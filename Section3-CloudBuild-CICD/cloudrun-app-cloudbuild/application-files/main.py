@@ -8,7 +8,7 @@ client = bigquery.Client()
 
 @app.route('/')
 def main(big_query_client=client):
-    table_id = "udemy-mlops-395416.test_schema.us_states"
+    table_id = "jp-mlops-sandbox.test_schema.us_states"
     job_config = bigquery.LoadJobConfig(
         write_disposition=bigquery.WriteDisposition.WRITE_TRUNCATE,
         source_format=bigquery.SourceFormat.CSV,
